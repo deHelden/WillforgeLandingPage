@@ -3,8 +3,8 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 32px;
-  padding: 64px 32px 72px;
-  min-height: 70vh;
+  padding: 96px 32px 120px;
+  min-height: 100vh;
   background: radial-gradient(circle at 20% 20%, rgba(124, 242, 212, 0.1), transparent 35%),
     radial-gradient(circle at 80% 0%, rgba(131, 95, 255, 0.14), transparent 30%),
     linear-gradient(145deg, #0b0b1a 0%, #060512 40%, #0f0c26 100%);

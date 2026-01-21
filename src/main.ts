@@ -1,16 +1,3 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+// Legacy entry placeholder to satisfy TypeScript include; real entry is src/main.tsx.
+export {}
 
-const root = document.getElementById('app')
-
-if (!root) {
-  throw new Error('Root container not found')
-}
-
-ReactDOM.createRoot(root).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)

@@ -5,7 +5,7 @@ const Contact = () => {
   const { contact } = copy
 
   return (
-    <section id="contact" className={styles.contact} aria-labelledby="contact-title">
+    <section id="contact" className={`${styles.contact} section`} aria-labelledby="contact-title">
       <div className={styles.header}>
         <h2 id="contact-title" className={styles.title}>
           Let's talk
