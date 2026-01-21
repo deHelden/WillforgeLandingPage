@@ -45,6 +45,7 @@
   border: 1px solid rgba(255, 255, 255, 0.04);
   background: rgba(255, 255, 255, 0.02);
   transition: border-color 180ms ease, transform 180ms ease, background-color 180ms ease;
+  min-width: 0;
 }
 
 .item:hover {
@@ -64,6 +65,8 @@
   font-weight: 600;
   color: #f6f7fb;
   letter-spacing: 0.01em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .icon {
@@ -72,10 +75,7 @@
   border-radius: 8px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, rgba(124, 242, 212, 0.2), rgba(131, 95, 255, 0.25));
   color: #f6f7fb;
-  font-size: 13px;
-  font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -85,6 +85,16 @@
 
   .title {
     font-size: 26px;
+  }
+}
+
+@media (max-width: 640px) {
+  .label {
+    display: none;
+  }
+
+  .item {
+    gap: 10px;
   }
 }
 
