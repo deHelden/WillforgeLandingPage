@@ -1,11 +1,18 @@
+import { forwardRef } from 'react'
 import copy from '../content'
 import styles from './Contact.module.css'
 
-const Contact = () => {
+const Contact = forwardRef<HTMLElement>((_, ref) => {
   const { contact } = copy
 
   return (
-    <section id="contact" className={`${styles.contact} section`} aria-labelledby="contact-title">
+    <section
+      ref={ref}
+      id="contact"
+      data-section="contact"
+      className={`${styles.contact} section`}
+      aria-labelledby="contact-title"
+    >
       <div className={styles.header}>
         <h2 id="contact-title" className={styles.title}>
           Let's talk
@@ -28,7 +35,9 @@ const Contact = () => {
       </div>
     </section>
   )
-}
+})
+
+Contact.displayName = 'Contact'
 
 export default Contact
 

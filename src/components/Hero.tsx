@@ -1,11 +1,16 @@
+import { forwardRef } from 'react'
 import copy from '../content'
 import styles from './Hero.module.css'
 
-const Hero = () => {
+type HeroProps = {
+  onCtaClick?: () => void
+}
+
+const Hero = forwardRef<HTMLElement, HeroProps>(({ onCtaClick }, ref) => {
   const { hero } = copy
 
   return (
-    <section className={`${styles.hero} section`} aria-labelledby="hero-title">
+    <section ref={ref} data-section="hero" className={`${styles.hero} section`} aria-labelledby="hero-title">
       <div className={styles.content}>
         <span className={styles.eyebrow}>
           <span className={styles.pulse} aria-hidden="true" />
@@ -18,10 +23,7 @@ const Hero = () => {
           href="#contact"
           onClick={(event) => {
             event.preventDefault()
-            const target = document.getElementById('contact')
-            if (target) {
-              target.scrollIntoView({ behavior: 'smooth', block: 'center' })
-            }
+            onCtaClick?.()
           }}
         >
           {hero.cta}
@@ -29,7 +31,9 @@ const Hero = () => {
       </div>
     </section>
   )
-}
+})
+
+Hero.displayName = 'Hero'
 
 export default Hero
 
