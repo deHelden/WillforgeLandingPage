@@ -39,7 +39,7 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
       </div>
 
       <div className={styles.items}>
-        <a className={styles.item} href={`tel:${contact.phone.replace(/[^+\\d]/g, '')}`} aria-label={`Call us at ${contact.phone}`}>
+        <a className={styles.item} href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`} aria-label={`Call us at ${contact.phone}`}>
           <span className={styles.icon} aria-hidden="true">
             <PhoneIcon />
           </span>

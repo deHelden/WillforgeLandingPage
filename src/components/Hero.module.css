@@ -3,6 +3,8 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 32px;
+  /* Safari: clip blurred pseudo-elements to rounded corners to avoid white bleed */
+  clip-path: inset(0 round 32px);
   padding: 96px 32px 120px;
   min-height: calc(100vh - 120px);
   background: radial-gradient(circle at 20% 20%, rgba(124, 242, 212, 0.08), transparent 35%),
