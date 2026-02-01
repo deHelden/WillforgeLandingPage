@@ -4,8 +4,22 @@
     "subtitle": "Turnkey analytics solutions for publicly available data.",
     "cta": "Contact us"
   },
+  "about": {
+    "title": "About Us",
+    "content": "WillForge provides B2B analytics solutions that help companies unlock market insights using publicly available data, enabling smarter decision-making and targeted outreach."
+  },
+  "whyUs": {
+    "title": "Why Choose Us",
+    "benefits": [
+      "Tailored lead generation solutions designed to connect you with your ideal customers",
+      "Actionable insights that empower your sales and marketing strategies",
+      "Scalable services suitable for businesses of all sizes and industries",
+      "Commitment to ethical data practices and full regulatory compliance",
+      "Hands-on consulting to ensure successful implementation and growth"
+    ]
+  },
   "contact": {
-    "phone": "+974 XXXX XXXX",
+    "phone": "+974 3358 0627",
     "email": "hello@willforge.net"
   }
 }

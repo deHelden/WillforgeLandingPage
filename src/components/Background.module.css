@@ -4,8 +4,7 @@
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.04), transparent 30%),
-    radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.02), transparent 28%);
+  background: #050510;
 }
 
 .layer {
@@ -14,32 +13,50 @@
   height: 200%;
   left: -50%;
   top: -50%;
-  filter: blur(60px);
-  opacity: 0.6;
+  filter: blur(80px);
+  opacity: 0;
   mix-blend-mode: screen;
-  animation: drift 18s ease-in-out infinite alternate;
-  transition: background 900ms ease, opacity 600ms ease;
-  background: radial-gradient(circle at 30% 30%, var(--c1, #7cf2d4), transparent 35%),
-    radial-gradient(circle at 70% 40%, var(--c2, #835fff), transparent 40%),
-    radial-gradient(circle at 40% 70%, var(--c3, rgba(124, 242, 212, 0.2)), transparent 45%);
+  transition: opacity 1.2s ease;
+  animation: drift 20s ease-in-out infinite alternate;
 }
 
-.layer.alt {
-  animation-duration: 22s;
-  animation-delay: -4s;
-  opacity: 0.5;
-  transition: background 900ms ease, opacity 600ms ease;
-  background: radial-gradient(circle at 20% 60%, var(--c2, #835fff), transparent 35%),
-    radial-gradient(circle at 75% 25%, var(--c1, #7cf2d4), transparent 38%),
-    radial-gradient(circle at 55% 80%, var(--c4, rgba(107, 188, 255, 0.25)), transparent 40%);
+.layer.active {
+  opacity: 0.65;
+}
+
+.hero {
+  background: radial-gradient(circle at 30% 30%, rgba(124, 242, 212, 0.7), transparent 35%),
+    radial-gradient(circle at 70% 40%, rgba(131, 95, 255, 0.65), transparent 40%),
+    radial-gradient(circle at 50% 70%, rgba(107, 188, 255, 0.3), transparent 45%);
+  animation-delay: 0s;
+}
+
+.about {
+  background: radial-gradient(circle at 70% 35%, rgba(107, 188, 255, 0.7), transparent 38%),
+    radial-gradient(circle at 25% 50%, rgba(131, 95, 255, 0.6), transparent 42%),
+    radial-gradient(circle at 55% 75%, rgba(124, 242, 212, 0.25), transparent 40%);
+  animation-delay: -3s;
+}
+
+.whyUs {
+  background: radial-gradient(circle at 25% 35%, rgba(131, 95, 255, 0.7), transparent 38%),
+    radial-gradient(circle at 75% 55%, rgba(255, 184, 122, 0.6), transparent 42%),
+    radial-gradient(circle at 45% 80%, rgba(107, 188, 255, 0.25), transparent 40%);
+  animation-delay: -6s;
+}
+
+.contact {
+  background: radial-gradient(circle at 65% 30%, rgba(255, 184, 122, 0.7), transparent 38%),
+    radial-gradient(circle at 30% 60%, rgba(107, 188, 255, 0.65), transparent 42%),
+    radial-gradient(circle at 70% 80%, rgba(131, 95, 255, 0.25), transparent 40%);
+  animation-delay: -9s;
 }
 
 @keyframes drift {
   from {
-    transform: translate3d(-20px, -10px, 0) scale(1);
+    transform: translate3d(-25px, -15px, 0) scale(1);
   }
   to {
-    transform: translate3d(30px, 20px, 0) scale(1.08);
+    transform: translate3d(35px, 25px, 0) scale(1.1);
   }
 }
-
