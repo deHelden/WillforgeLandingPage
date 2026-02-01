@@ -14,7 +14,7 @@ const Hero = forwardRef<HTMLElement, HeroProps>(({ onCtaClick }, ref) => {
       <div className={styles.content}>
         <span className={styles.eyebrow}>
           <span className={styles.pulse} aria-hidden="true" />
-          Boutique creative studio
+          Data Analytics Studio
         </span>
         <h1 id="hero-title">{hero.title}</h1>
         <p className={styles.subtitle}>{hero.subtitle}</p>
